@@ -20,7 +20,7 @@
       <tr>
         <td><%= user.email %></td>
         <td><%= user.password %></td>
-        <td><%= user.image %></td>
+        <td><img src='<%= user.image %>' class='img-responsive'></td>
         <td><%= user.username %></td>
         <td>
           <a href="/users/<%= user.id %>" class="btn btn-primary">Show</a>

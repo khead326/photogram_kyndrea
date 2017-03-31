@@ -7,7 +7,7 @@
 
       <div class="panel-body">
 
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "form-horizontal", role: "form" }) do |f| %>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "form-horizontal", role: "form", multipart: true }) do |f| %>
           <%= devise_error_messages! %>
 
           <div class="form-group">
@@ -57,7 +57,8 @@
           <div class="form-group">
             <%= f.label :image, class: "col-sm-2 control-label" %>
             <div class="col-sm-10">
-              <%= f.text_field :image, :class => "form-control", :placeholder => "Enter image" %>
+              <%= cl_image_tag(resource.image.to_s, :width => 90, :height => 90, :crop => :thumb) %>
+              <%= f.file_field :image, :class => "form-control" %>
             </div>
           </div>
 
