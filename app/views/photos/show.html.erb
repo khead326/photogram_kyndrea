@@ -12,7 +12,13 @@
       <dd><%= @photo.caption %></dd>
 
       <dt>User</dt>
-      <dd><%= @photo.user_id %></dd>
+      <dd>
+        <% if @photo.user.present? %>
+          <a href="/users/<%= @photo.user_id %>">
+            <%= @photo.user.email %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 
