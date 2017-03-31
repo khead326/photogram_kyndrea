@@ -1,0 +1,1 @@
+{"name":"photogram_kyndrea","repository":"https://github.com/khead326/photogram_kyndrea","env":{"CLOUDINARY_CLOUD_NAME":{"required":true},"CLOUDINARY_API_KEY":{"required":true},"CLOUDINARY_API_SECRET":{"required":true},"ROLLBAR_ACCESS_TOKEN":{"required":true}}}
